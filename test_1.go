@@ -5,11 +5,11 @@ import (
 )
 
 func main() {
-	goku := Saiyan{"Goku", 9000}
-	Super(goku)
-	fmt.Println(goku.Power)
-}
+	fmt.Print("Enter a number:")
+	var input float64
+	fmt.Scanf("%f", &input)
 
-func Super(s Saiyan) {
-	s.Power += 10000
+	output := input * (1 / 3.2808)
+
+	fmt.Println(output)
 }
