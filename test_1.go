@@ -5,15 +5,15 @@ import (
 )
 
 func main() {
-	for i := 1; i <= 100; i++ {
-		if i%3 == 0 && i%5 == 0 {
-			fmt.Println("FizzBuzz")
-		} else if i%5 == 0 {
-			fmt.Println("Buzz")
-		} else if i%3 == 0 {
-			fmt.Println("Fizz")
-		} else {
-			fmt.Println(i)
-		}
+	var x [5]float64
+	x[0] = 98
+	x[1] = 93
+	x[2] = 77
+	x[3] = 82
+	x[4] = 83
+	var total float64 = 0
+	for i := 0; i < 5; i++ {
+		total += x[i]
 	}
+	fmt.Println(total / 5)
 }
