@@ -5,7 +5,6 @@ import (
 )
 
 func main() {
-	var power int
-	power = 9000
-	fmt.Println("It's over \n", power)
+	name, power := "Goku", 9000
+	fmt.Println("%s's power is over %d\n", name, power)
 }
