@@ -5,11 +5,11 @@ import (
 )
 
 func main() {
-	for i := 1; i <= 10; i++ {
-		if i%2 == 0 {
-			fmt.Println(i, "чет")
+	for i := 1; i <= 100; i++ {
+		if i%3 == 0 {
+			fmt.Println(i)
 		} else {
-			fmt.Println(i, "нечет")
+
 		}
 	}
 
