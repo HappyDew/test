@@ -4,19 +4,15 @@ import (
 	"fmt"
 )
 
-func main() {
-	x := []int{
-		48, 96, 86, 68,
-		57, 82, 63, 70,
-		37, 34, 83, 27,
-		19, 97, 9, 17,
+func average(xs []float64) float64 {
+	total := 0.0
+	for _, v := range xs {
+		total += v
 	}
-	total := x[0]
+	return total / float64(len(xs))
+}
 
-	for _, value := range x {
-		if value < total {
-			total = value
-		}
-	}
-	fmt.Println(total)
+func main() {
+	someOtherName := []float64{98, 93, 77, 82, 83}
+	fmt.Println(average(someOtherName))
 }
