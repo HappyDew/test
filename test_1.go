@@ -5,7 +5,18 @@ import (
 )
 
 func main() {
-	arr := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	x := arr[3:9]
-	fmt.Println(x)
+	x := []int{
+		48, 96, 86, 68,
+		57, 82, 63, 70,
+		37, 34, 83, 27,
+		19, 97, 9, 17,
+	}
+	total := x[0]
+
+	for _, value := range x {
+		if value < total {
+			total = value
+		}
+	}
+	fmt.Println(total)
 }
