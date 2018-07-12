@@ -2,12 +2,14 @@ package main
 
 import (
 	"fmt"
-
-	"golang-book/test/test.git/math"
+	"io/ioutil"
 )
 
 func main() {
-	xs := []float64{1, 2, 3, 4}
-	avg := math.Average(xs)
-	fmt.Println(avg)
+	bs, err := ioutil.ReadFile("test_1.go")
+	if err != nil {
+		return
+	}
+	str := string(bs)
+	fmt.Println(str)
 }
