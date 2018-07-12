@@ -2,17 +2,22 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
 )
 
-func average(xs []float64) float64 {
-	total := 0.0
-	for _, v := range xs {
-		total += v
+func f(n int) {
+	for i := 0; i < 10; i++ {
+		fmt.Println(n, ":", i)
+		amt := time.Duration(rand.Intn(250))
+		time.Sleep(time.Millisecond * amt)
 	}
-	return total / float64(len(xs))
 }
 
 func main() {
-	someOtherName := []float64{98, 93, 77, 82, 83}
-	fmt.Println(average(someOtherName))
+	for i := 1; i < 10; i++ {
+		go f(i)
+	}
+	var input string
+	fmt.Scanln(&input)
 }
